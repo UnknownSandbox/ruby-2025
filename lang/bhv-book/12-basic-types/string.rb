@@ -38,3 +38,6 @@ puts 'Hello, world!'.gsub('l', '-')
 # size of string
 puts 'Hello, world!'.size
 puts 'Hello, world!'.length
+
+# split
+puts ENV['PATH'].split(':')

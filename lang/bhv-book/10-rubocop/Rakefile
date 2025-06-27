@@ -1,0 +1,25 @@
+# frozen_string_literal: true
+
+desc 'Say hello to the world'
+task :install do
+  puts 'Installing gem dependencies...'
+  system('bundle install') || abort('Failed to install dependencies')
+  puts 'Dependencies installed successfully!'
+end
+
+task :check_ruby_version do
+  puts "Ruby version: #{RUBY_VERSION}"
+  puts "Ruby executable: #{RbConfig.ruby}"
+end
+
+namespace :lint do
+  desc 'Run rubocop checks'
+  task :check do
+    system('rubocop') || abort("Failed to run 'rubocop'")
+  end
+
+  desc 'Run rubocop checks with autofix'
+  task :fix do
+    system('rubocop -a') || abort("Failed to run 'rubocop -a'")
+  end
+end

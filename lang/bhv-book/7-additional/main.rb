@@ -41,3 +41,6 @@ p defined? not_exists
 # sugar
 p true or false
 p true and false # true, wat ???
+
+# bang
+puts hello.upcase! # HELLO, WORLD!

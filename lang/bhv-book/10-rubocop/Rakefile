@@ -20,6 +20,6 @@ namespace :lint do
 
   desc 'Run rubocop checks with autofix'
   task :fix do
-    system('rubocop -a') || abort("Failed to run 'rubocop -a'")
+    system('rubocop -A') || abort("Failed to run 'rubocop -A'")
   end
 end

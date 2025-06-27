@@ -1,0 +1,7 @@
+desc 'Say hello to the world'
+
+task :install do
+  puts "Installing gem dependencies..."
+  system('bundle install') || abort("Failed to install dependencies")
+  puts "Dependencies installed successfully!"
+end

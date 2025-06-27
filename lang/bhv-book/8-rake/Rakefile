@@ -1,0 +1,25 @@
+desc 'Default task'
+task default: :hello
+
+desc 'Say hello to the world'
+
+task :hello do
+  puts "Hello, world!"
+end
+
+# One task can run multiple sub-tasks
+task :hello do
+  puts "Hello, world 2!"
+end
+
+namespace :greet do
+  desc 'Say hello to the world in a namespace'
+  task :world do
+    puts "Hello, world from namespace!"
+  end
+
+  desc 'Say hello to Ruby in a namespace'
+  task :ruby do
+    puts "Hello, Ruby from namespace!"
+  end
+end

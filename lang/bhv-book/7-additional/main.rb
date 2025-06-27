@@ -26,3 +26,18 @@ obj = Object.new
 obj_clone = obj.clone # obj.dup
 
 puts obj_clone, obj
+
+# another magic
+puts __FILE__ # main.rb
+puts __LINE__ # 32
+
+# safe access (why not use ? symbol)
+hello = 'Hello, world!'
+p hello.index('ruby')&.odd?
+
+# check variable definition
+p defined? not_exists
+
+# sugar
+p true or false
+p true and false # true, wat ???

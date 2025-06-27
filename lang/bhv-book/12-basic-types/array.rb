@@ -13,3 +13,10 @@ p colors
 
 colors = %i[red orange yellow green blue indigo violet]
 p colors
+
+# destructor
+p(*colors)
+
+fst, *snd = ['Hello', 'world', '!']
+p fst # "Hello"
+p snd # ["world", "!"]

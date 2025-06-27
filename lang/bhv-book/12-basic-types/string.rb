@@ -41,3 +41,6 @@ puts 'Hello, world!'.length
 
 # split
 puts ENV['PATH'].split(':')
+
+# ok
+puts 'Hello' * 3 # HelloHelloHello

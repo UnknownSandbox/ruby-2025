@@ -83,6 +83,12 @@ class Ticket2
   end
 
   attr_reader :price
+
+  private
+
+  def set_price(price)
+    @price = price
+  end
 end
 
 ticket = Ticket2.new 800
@@ -92,3 +98,14 @@ puts ticket
 ticket = Ticket.allocate
 puts ticket.price.nil?
 puts ticket
+
+# inheritance
+class Ticket3 < Ticket2
+  # remove method from base class
+  remove_method :set_price
+  attr_reader :date
+end
+
+# dynamic base class. Wat ?
+class Child < rand(0..1)&.zero? ? String : Integer
+end

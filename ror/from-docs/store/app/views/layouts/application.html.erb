@@ -26,9 +26,11 @@
     <nav>
       <%= link_to "Home", "/" %>
       <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+      <%= link_to "Login", new_session_path unless authenticated? %>
     </nav>
 
     <main>
+      <div class="notice"><%= notice %></div>
       <%= yield %>
     </main>
   </body>
